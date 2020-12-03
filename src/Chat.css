@@ -34,7 +34,7 @@
     /* height: 100vh; */
     margin-bottom: 10px;
     overflow-y: scroll;
-    padding: 20px;
+    padding: 25px;
 
 }
 
@@ -50,4 +50,10 @@
 {
     font-size: xx-small;
     margin-left: 10px;
+}
+
+.chat__name
+{
+    position: absolute;
+    top: -20px;
 }
