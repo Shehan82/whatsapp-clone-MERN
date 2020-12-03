@@ -9,6 +9,7 @@
 
 .sidebar__header
 {
+    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -58,6 +59,7 @@
 .sidebar__chat
 {
     margin-top: 10px;
+    margin-bottom: 10px;
     height: 100vh;
     background-color: white;
 }

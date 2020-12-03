@@ -14,8 +14,8 @@ function Chat() {
 
                 {/* 2 */}
                 <div className="chat__headerInfo">
-                    <h3>chat room 1</h3>
-                    <p>this is last seen</p>
+                    <h4>🌸🌸 වගේ පුංචි 👶👶 අපි</h4>
+                    <p>last seen at 2.34pm</p>
                 </div>
                 
                 {/* 3 */}
@@ -32,6 +32,15 @@ function Chat() {
                     </IconButton>
                 </div>
             </div>
+            <div className="chat__body">
+                <p className="chat__message">
+                    <span className="chat__name">Shehan</span>
+                            this is the message
+                    <span className="chat__timestamp">{new Date().toUTCString()}</span>
+                </p>
+                
+            </div>
+
         </div>
     )
 }
