@@ -3,5 +3,59 @@
     display: flex;
     flex-direction: column;
     flex: 0.35 ;
-    border: 2px solid black;
+   
+}
+
+.sidebar__header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-right: 1px solid lightgray;
+}
+
+.sidebar__headerRight
+{
+    display: flex;
+    min-width: 10vh;
+}
+
+.sidebar__search
+{
+    
+    
+   
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    background-color:#f6f6f6;
+    height: 39px;
+    padding: 10px;
+    border-right: 1px solid lightgray;
+   
+   
+
+
+}
+
+.sidebar__searchContainer
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+   
+    
+}
+
+.sidebar__searchInput
+{
+    border: none;
+    outline: none;
 }
