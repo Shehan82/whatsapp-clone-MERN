@@ -1,4 +1,7 @@
 .sidebar
 {
-    color: red;
+    display: flex;
+    flex-direction: column;
+    flex: 0.35 ;
+    border: 2px solid black;
 }
