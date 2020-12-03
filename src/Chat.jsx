@@ -3,6 +3,8 @@ import { Avatar, IconButton ,Input} from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { SearchOutlined } from '@material-ui/icons';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
+import MoodIcon from '@material-ui/icons/Mood';
+import MicIcon from '@material-ui/icons/Mic';
 import './Chat.css'
 
 function Chat() {
@@ -48,6 +50,23 @@ function Chat() {
                             this is the message
                     <span className="chat__timestamp">{new Date().toUTCString()}</span>
                 </p>
+                
+            </div>
+            <div className="chat__input">
+                <IconButton>
+                    <MoodIcon/>
+                </IconButton>
+                
+                <div className="chat__inputBarContainer">
+                    <form action="">
+                        <input type="text" placeholder="Type a message"/>
+                        <button type="submit">ksjfhskjf</button>
+                    </form>
+                    
+                </div>
+                <IconButton>
+                    <MicIcon/>
+                </IconButton>
                 
             </div>
 

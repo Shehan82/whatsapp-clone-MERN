@@ -69,3 +69,36 @@
     margin-right: 0px;
 
 }
+
+.chat__input
+{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.chat__inputBarContainer
+{
+    flex: 1;
+    background-color: white;
+    display: flex;
+    min-height: 20px;
+    height: fit-content;
+    align-items: center;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 0px 10px 0px 10px;
+    
+}
+.chat__inputBarContainer > form > input
+{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.chat__inputBarContainer > form > button
+{
+    display: none;
+}
+
+
