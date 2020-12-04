@@ -6,8 +6,24 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 import MoodIcon from '@material-ui/icons/Mood';
 import MicIcon from '@material-ui/icons/Mic';
 import './Chat.css'
+import { useState } from 'react';
+import axios from './axios';
 
-function Chat() {
+function Chat({messages}) {
+
+    const [input, setInput] = useState("");
+    
+    const sendMessage = (e)=>{
+        e.preventDefault();
+        axios.post('messages/new', {
+        message:input,
+	    name:"shehan",
+	    timestamp:"demo",
+	    received: false
+        });
+
+        setInput("");
+    }
     return (
         <div className="chat">
             <div className="chat__header">
@@ -35,21 +51,25 @@ function Chat() {
                 </div>
             </div>
             <div className="chat__body">
-                <p className="chat__message">
+                {messages.map(message =>(
+
+                     <p className={`chat__message ${message.received && "chat__receive"}`}>
+                     <span className="chat__name">{message.name}</span>
+                             {message.message}
+                     <span className="chat__timestamp">{new Date().toUTCString()}</span>
+                    </p>
+                ))}
+               
+                {/* <p className="chat__message chat__receive">
                     <span className="chat__name">Shehan</span>
                             this is the message
                     <span className="chat__timestamp">{new Date().toUTCString()}</span>
-                </p>
-                <p className="chat__message chat__receive">
+                </p> */}
+                {/* <p className="chat__message">
                     <span className="chat__name">Shehan</span>
                             this is the message
                     <span className="chat__timestamp">{new Date().toUTCString()}</span>
-                </p>
-                <p className="chat__message">
-                    <span className="chat__name">Shehan</span>
-                            this is the message
-                    <span className="chat__timestamp">{new Date().toUTCString()}</span>
-                </p>
+                </p> */}
                 
             </div>
             <div className="chat__input">
@@ -58,9 +78,9 @@ function Chat() {
                 </IconButton>
                 
                 <div className="chat__inputBarContainer">
-                    <form action="">
-                        <input type="text" placeholder="Type a message"/>
-                        <button type="submit">ksjfhskjf</button>
+                    <form id="form" action="">
+                        <input value={input} onChange={e=>{setInput(e.target.value)}} type="text" placeholder="Type a message"/>
+                        <button onClick={sendMessage} type="submit">ksjfhskjf</button>
                     </form>
                     
                 </div>
