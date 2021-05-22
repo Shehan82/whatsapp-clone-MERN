@@ -22,7 +22,7 @@ function App() {
     var pusher = new Pusher('bae7fff4f6e77102979d', {
       cluster: 'eu'
     });
-
+ 
     var channel = pusher.subscribe('messages');
     channel.bind('inserted', function(data) {
       // alert(JSON.stringify(data));
